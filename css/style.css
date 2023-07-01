@@ -1,0 +1,381 @@
+/*=============== VARIABLES ===============*/
+:root {
+
+  /*=============== COLOR ===============*/
+  --primary-color: #0c56e2;
+  --secondary-color: #074d6e;
+  --gray-color: #8b8b8b;
+  --dark-color: #777;
+  --white-color: #fff;
+  --shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+
+  /*=============== FONT ===============*/
+  --font: 'Poppins', sans-serif;
+
+  /*=============== FONT SIZE ===============*/
+  --font-title: 1.5em;
+  --font-normal: 1em;
+
+  /*=============== FONT WEIGTH ===============*/
+  --font-normal: 400;
+  --font-bold: 800;
+
+  /*=============== Z INDEX ===============*/
+  --z-fixed: 10;
+}
+
+/*=============== BREAKPOINT VARIABLES ===============*/
+@media (min-width: 768px) {
+  :root {
+    --font-title: 2em;
+    --font-normal: 1.2em;
+  }
+}
+
+/*=============== LAYOUT ===============*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font);
+  font-size: var(--font-normal);
+  background-color: #f7f7f7;
+}
+
+img {
+  max-width: 100%;
+}
+
+p {
+  color: var(--gray-color);
+  line-height: 1.5;
+}
+
+a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+
+.container {
+  margin: 5em auto;
+  max-width: 1100px;
+  padding-inline: 1em;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5em
+}
+
+.section {
+  margin-top: 4em;
+}
+
+.subtitle {
+  font-size: .8em;
+  font-weight: var(--font-normal);
+  color: var(--gray-color);
+}
+
+.button {
+  color: var(--white-color);
+  background-color: var(--primary-color);
+  border: none;
+}
+
+/*=============== NAVBAR & HEADER ===============*/
+.header {
+  padding: .5em 1em;
+  background-color: var(--white-color);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: var(--z-fixed);
+}
+
+.nav {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav__logo {
+  width: 40px;
+  height: 40px;
+}
+
+.nav__element-image {}
+
+.nav__user {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/*=============== PROFILE ===============*/
+.profile__main {
+  box-shadow: var(--shadow);
+}
+
+.profile__date {
+  padding: 1em;
+  border-bottom: 1px solid var(--gray-color);
+  position: relative;
+}
+
+.profile__date-img {
+  width: 60px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  position: absolute;
+  top: -2.5em;
+}
+
+.profile__notification {
+  margin-top: 2em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.profile__recent {
+  margin-top: 2em;
+  box-shadow: var(--shadow);
+  padding: 1em;
+}
+
+.profile__recent-title {
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--gray-color);
+  padding-top: 2em;
+}
+
+.profile__recent-item {
+  margin-block: 1em;
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1em;
+}
+
+/*=============== CONTACT ===============*/
+.contact {
+  box-shadow: var(--shadow);
+}
+
+.contact__chat {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  border-bottom: 1px solid var(--gray-color);
+}
+
+.contact__img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.contact__form {
+  flex: 1;
+}
+
+.contact__input {
+  padding: 1em;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.contact__icons {
+  display: flex;
+  align-items: center;
+}
+
+.contact__icons-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  padding-block: 1em;
+  color: var(--gray-color);
+  border-right: 1px solid var(--gray-color);
+}
+
+.button--icon {
+  color: var(--white-color);
+}
+
+/*=============== POST ===============*/
+.post {
+  margin-block: 2em;
+  padding: 1em;
+  box-shadow: var(--shadow)
+}
+
+.post__profile {
+  display: flex;
+  align-items: start;
+  gap: 1em;
+  margin-top: 2em;
+}
+
+.post__profile-image {
+  width: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.post__text {
+  margin-block: 1em;
+  text-align: justify;
+}
+
+.post__reacion {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.post__icon {
+  width: 20px;
+}
+
+.post__interaciones {
+  border-top: 1px solid var(--gray-color);
+  display: flex;
+  align-items: center;
+}
+
+.post__interaciones-profile {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+
+.post__interaciones-image {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.post__interaciones-arrow {
+  width: 20px;
+}
+
+.post__interaciones-icon {
+  display: flex;
+  justify-content: center;
+  flex: 1;
+  padding-top: 1em;
+}
+
+/*=============== TRENDING ===============*/
+.trending {
+  padding: 1em;
+}
+
+.treanding__title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.treanding__notice-title {
+  font-weight: var(--font-normal);
+  margin-block: 1em;
+}
+
+.trending__button {
+  display: inline-block;
+  margin-top: 1em;
+  font-weight: var(--font-bold);
+}
+
+/*=============== AD ===============*/
+.ad {
+  padding: 1em;
+  box-shadow: var(--shadow);
+}
+
+.ad__title {
+  text-align: right;
+  font-weight: var(--font-normal);
+}
+
+.ad__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2em;
+}
+
+.ad__images {
+  display: flex;
+  gap: 1em;
+  margin-block: 1em;
+}
+
+.ad__images-img {
+  width: 60px;
+  border-radius: 50%;
+}
+
+.button--outline {
+  margin-top: 1em;
+  padding: .5em 1.5em;
+  background-color: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  border-radius: 20px;
+}
+
+/*=============== FOOTER ===============*/
+.footer {
+  margin-block: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.footer__element {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1em;
+}
+
+.footer__copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+.footer__copy-logo {
+  width: 30px;
+}
+
+/*=============== BREAKPOINT ===============*/
+@media (max-width: 400px) {
+  .nav__element-image {
+    width: 36px;
+  }
+}
+
+@media (min-width: 800px) {
+  .linkedin {
+    grid-template-columns: 1fr 2fr 1fr;
+  }
+}
